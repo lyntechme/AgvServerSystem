@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{588ADE84-81C6-4038-92CF-5B2806B1FDF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgvServerSystem</RootNamespace>
+    <AssemblyName>AgvServerSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>t1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.5.6495.41576, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\OmronUdp\OmronUdpForm\bin\Debug\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ClientUtils, Version=1.0.0.30, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\ClientUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="MESDataLayer, Version=1.0.0.11, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\MESDataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="RemoteObject, Version=1.0.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\RemoteObject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.102.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.102.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\OmronUdp\OmronUdpForm\bin\Debug\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoubleBufferedDataGridView.cs" />
+    <Compile Include="LabelTx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LabelTx.Designer.cs">
+      <DependentUpon>LabelTx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\InventoryLocationSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\InventoryLocationSetForm.designer.cs">
+      <DependentUpon>InventoryLocationSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\TestTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\TestTask.Designer.cs">
+      <DependentUpon>TestTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsrControls\DoubleLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsrControls\DoubleLabel.Designer.cs">
+      <DependentUpon>DoubleLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Initial\ParametersOperate.cs" />
+    <Compile Include="Initial\WinSleepCtr.cs" />
+    <Compile Include="UI_Agv\ManualQRCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Agv\ManualQRCode.Designer.cs">
+      <DependentUpon>ManualQRCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\LoadingFormService.cs" />
+    <Compile Include="UI_Other\TestCodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\TestCodeForm.Designer.cs">
+      <DependentUpon>TestCodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsrControls\MapPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI_Agv\AgvModelSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Agv\AgvModelSetForm.Designer.cs">
+      <DependentUpon>AgvModelSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Agv\AgvShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Agv\AgvShowForm.Designer.cs">
+      <DependentUpon>AgvShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsOprate\ControlsOperate.cs" />
+    <Compile Include="UI_Agv\AgvState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Agv\AgvState.Designer.cs">
+      <DependentUpon>AgvState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\ChargeLimitedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\MapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\MapForm.designer.cs">
+      <DependentUpon>MapForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\MESForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\MESForm.Designer.cs">
+      <DependentUpon>MESForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\StationSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\StationSetForm.designer.cs">
+      <DependentUpon>StationSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\TaskForm.designer.cs">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\WaitFormService.cs" />
+    <Compile Include="UI_UserControls\AgvMap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI_UserControls\AgvMap.Designer.cs">
+      <DependentUpon>AgvMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_User\AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_User\AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlsOprate\DataToExcel.cs" />
+    <Compile Include="ControlsOprate\ImageToByteOperate.cs" />
+    <Compile Include="ControlsOprate\DataConvert.cs" />
+    <Compile Include="UI_User\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_User\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_User\LoginRoler.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\ManageUserInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\ManageUserInfoForm.Designer.cs">
+      <DependentUpon>ManageUserInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_User\PasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_User\PasswordForm.Designer.cs">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\PositionNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\PositionNameForm.Designer.cs">
+      <DependentUpon>PositionNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI_Other\InventoryLocationSetForm.resx">
+      <DependentUpon>InventoryLocationSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\TestTask.resx">
+      <DependentUpon>TestTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsrControls\DoubleLabel.resx">
+      <DependentUpon>DoubleLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Agv\ManualQRCode.resx">
+      <DependentUpon>ManualQRCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Agv\AgvState.resx">
+      <DependentUpon>AgvState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\ChargeLimitedForm.resx">
+      <DependentUpon>ChargeLimitedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\TestCodeForm.resx">
+      <DependentUpon>TestCodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\MapForm.resx">
+      <DependentUpon>MapForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\MESForm.resx">
+      <DependentUpon>MESForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\StationSetForm.resx">
+      <DependentUpon>StationSetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\TaskForm.resx">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_UserControls\AgvMap.resx">
+      <DependentUpon>AgvMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_User\AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Agv\AgvModelSetForm.resx">
+      <DependentUpon>AgvModelSetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Agv\AgvShowForm.resx">
+      <DependentUpon>AgvShowForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_User\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\ManageUserInfoForm.resx">
+      <DependentUpon>ManageUserInfoForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_User\PasswordForm.resx">
+      <DependentUpon>PasswordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\PositionNameForm.resx">
+      <DependentUpon>PositionNameForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Rfid\RfidSetForm.resx">
+      <DependentUpon>RfidSetForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\StationTimeForm.resx">
+      <DependentUpon>StationTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI_Other\TaskLineForm.resx">
+      <DependentUpon>TaskLineForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\DataSources\BLL.AGVService.TaskCommand.datasource" />
+    <None Include="Properties\DataSources\BLL.AGVService.TaskRelease.datasource" />
+    <None Include="Properties\DataSources\BLL.AGVService.TrayState.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI_Rfid\RfidSetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Rfid\RfidSetForm.Designer.cs">
+      <DependentUpon>RfidSetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\StationTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\StationTimeForm.Designer.cs">
+      <DependentUpon>StationTimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Other\TaskLineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI_Other\TaskLineForm.Designer.cs">
+      <DependentUpon>TaskLineForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\AgvStatus\barrier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\AgvStatus\err.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\AgvStatus\line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\AgvStatus\lineok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\AgvStatus\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\BackGround\map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\BackGround\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Icon\Tip.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\Icon\split.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AgvUtils\AgvPLCUtils.csproj">
+      <Project>{060019fe-3fb5-4853-9a05-854aca3c02e5}</Project>
+      <Name>AgvPLCUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{9237dc9e-1a42-46cb-9faa-6c6f12b9af5b}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{033f11ea-d690-4ea8-8273-0da79a12f376}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image1.bmp" />
+    <None Include="Resources\testTran.png" />
+    <None Include="Image\Icon\low2.png" />
+    <Content Include="Image\Icon\work.png" />
+    <Content Include="t1.ico" />
+    <Content Include="t2.ico" />
+    <Content Include="t3.ico" />
+    <None Include="Image\Icon\UpAndLow.png" />
+    <None Include="Image\Icon\Up.png" />
+    <None Include="Image\Icon\low.png" />
+    <Content Include="Image\Icon\okAgv.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
